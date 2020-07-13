@@ -20,5 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/soorten','SoortController@index');
 
 Route::get('/producten','ProductController@index');
-Route::get('/producten/{barcode}','ProductController@show');
-// Route::get('/producten/{soort}','ProductController@showSoort');
+Route::get('/producten/barcode/{barcode}','ProductController@showBarcode');
+Route::get('/producten/soort/{soort}','ProductController@showSoort');

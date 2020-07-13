@@ -12,11 +12,11 @@ class ProductController extends Controller
       return Product::all();
     }
 
-    public function show($barcode){
+    public function showBarcode($barcode){
       return Product::where('barcode','=',$barcode)->get();
     }
 
-    // public function showSoort($soort){
-    //   return Product::where('soort','=',$soort)->get();
-    // }
+    public function showSoort($soort){
+      return Product::where('soort','=',$soort)->get();
+    }
 }
