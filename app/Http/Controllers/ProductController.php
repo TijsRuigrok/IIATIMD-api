@@ -13,7 +13,7 @@ class ProductController extends Controller
     }
 
     public function showBarcode($barcode){
-      return Product::where('barcode','=',$barcode)->get();
+      return Product::where('barcode','=',$barcode)->first();
     }
 
     public function showSoort($soort){
