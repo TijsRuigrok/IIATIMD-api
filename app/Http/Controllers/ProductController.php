@@ -29,7 +29,7 @@ class ProductController extends Controller
        $product->soort = $request->soort;
        $product->houdbaarheidsdatum = $request->houdbaarheidsdatum;
        $product->notitie = $request->notitie;
-       $product->gebruikers_id = $request->gebruikers_id;
+       $product->gebruiker_id = $request->gebruiker_id;
        $product->save();
 
      }
