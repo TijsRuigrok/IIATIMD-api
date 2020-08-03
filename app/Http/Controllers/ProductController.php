@@ -19,4 +19,18 @@ class ProductController extends Controller
     public function showSoort($soort){
       return Product::where('soort','=',$soort)->get();
     }
+
+    public function store(Request $request){
+       //return response()->json([$request->all()]);
+
+       $product = new Product();
+       $product->naam = $request->naam;
+       $product->barcode = $request->barcode;
+       $product->soort = $request->soort;
+       $product->houdbaarheidsdatum = $request->houdbaarheidsdatum;
+       $product->notitie = $request->notitie;
+       $product->gebruikers_id = $request->gebruikers_id;
+       $product->save();
+
+     }
 }
