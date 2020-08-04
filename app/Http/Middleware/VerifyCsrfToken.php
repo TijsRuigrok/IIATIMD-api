@@ -19,6 +19,6 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'http://142.93.235.231/api/productToevoegen'
+        
     ];
 }
