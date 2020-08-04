@@ -26,7 +26,6 @@ class ProductController extends Controller
           // ->with('bier',Bier::all());
     }
     public function store(Request $request){
-       //return response()->json([$request->all()]);
 
        $product = new Product();
        $product->naam = $request->naam;
