@@ -20,6 +20,11 @@ class ProductController extends Controller
       return Product::where('soort','=',$soort)->get();
     }
 
+    public function create(){
+      return view('product.create');
+          // ->with('biersoorten',Biersoort::all())
+          // ->with('bier',Bier::all());
+    }
     public function store(Request $request){
        //return response()->json([$request->all()]);
 
