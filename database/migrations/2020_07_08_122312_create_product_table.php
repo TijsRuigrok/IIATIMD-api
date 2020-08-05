@@ -22,7 +22,7 @@ class CreateProductTable extends Migration
             $table->date('houdbaarheidsdatum');
             $table->string('notitie');
             $table->integer('gebruiker_id')->unsigned()->nullable();
-            $table->foreign('gebruiker_id')->references('id')->on('users');
+            $table->foreign('gebruiker_id')->references('id')->on('gebruiker');
         });
     }
 

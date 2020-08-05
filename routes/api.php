@@ -24,8 +24,8 @@ Route::get('/producten/barcode/{barcode}','ProductController@showBarcode');
 Route::get('/producten/soort/{soort}','ProductController@showSoort');
 Route::post('/productToevoegen', 'ProductController@store');
 
-Route::get('/gebruikers','UserController@index');
-Route::post('/gebruikerToevoegen', 'UserController@store');
+Route::get('/gebruikers','GebruikerController@index');
+Route::post('/gebruikerToevoegen', 'GebruikerController@store');
 
 //Formulier voor het testen van POST route
 //Moet uitgecomment blijven
