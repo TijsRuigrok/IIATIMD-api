@@ -25,6 +25,7 @@ Route::get('/producten/soort/{soort}','ProductController@showSoort');
 Route::post('/productToevoegen', 'ProductController@store');
 
 Route::get('/gebruikers','GebruikerController@index');
+Route::get('/gebruikers/{email}','GebruikerController@show');
 Route::post('/gebruikerToevoegen', 'GebruikerController@store');
 
 //Formulier voor het testen van POST route

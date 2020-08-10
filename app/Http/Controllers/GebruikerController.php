@@ -12,6 +12,10 @@ class GebruikerController extends Controller
       return Gebruiker::all();
     }
 
+    public function show($email){
+      return Gebruiker::where('email','=',$email)->first();
+    }
+
     public function store(Request $request){
        $gebruiker = new Gebruiker();
        $gebruiker->naam = $request->naam;
