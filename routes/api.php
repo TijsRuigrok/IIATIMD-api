@@ -30,4 +30,4 @@ Route::post('/gebruikerToevoegen', 'GebruikerController@store');
 
 //Formulier voor het testen van POST route
 //Moet uitgecomment blijven
-//Route::get('/producten/toevoegen','ProductController@create');
+Route::get('/producten/toevoegen','ProductController@create');
