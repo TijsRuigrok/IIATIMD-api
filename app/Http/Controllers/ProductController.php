@@ -26,8 +26,6 @@ class ProductController extends Controller
 
     public function create(){
       return view('product.create');
-          // ->with('biersoorten',Biersoort::all())
-          // ->with('bier',Bier::all());
     }
     public function store(Request $request){
 
@@ -37,7 +35,7 @@ class ProductController extends Controller
        $product->soort = $request->soort;
        $product->houdbaarheidsdatum = $request->houdbaarheidsdatum;
        $product->notitie = $request->notitie;
-       $product->gebruiker_id = $request->gebruiker_id;
+       $product->gebruiker_email = $request->gebruiker_email;
        $product->save();
 
      }
