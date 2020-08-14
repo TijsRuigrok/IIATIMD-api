@@ -20,6 +20,10 @@ class ProductController extends Controller
       return Product::where('soort','=',$soort)->get();
     }
 
+    public function showEmail($email){
+      return Product::where('gebruiker_email','=',$email)->get();
+    }
+
     public function create(){
       return view('product.create');
           // ->with('biersoorten',Biersoort::all())

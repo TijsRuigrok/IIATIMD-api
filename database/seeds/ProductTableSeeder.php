@@ -17,7 +17,7 @@ class ProductTableSeeder extends Seeder
           'soort' => 'Groente en Fruit',
           'houdbaarheidsdatum' => '2020-08-10',
           'notitie' => 'Bananen zijn lekker.',
-          'gebruiker_id' => '1',
+          'gebruiker_email' => 'TijsRuigrok15@gmail.com',
         ]);
 
     }

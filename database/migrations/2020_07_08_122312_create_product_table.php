@@ -16,13 +16,13 @@ class CreateProductTable extends Migration
         Schema::create('product', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('naam');
-            $table->string('barcode')->unique();
+            $table->string('barcode');
             $table->string('soort');
             $table->foreign('soort')->references('naam')->on('soort');
             $table->date('houdbaarheidsdatum');
             $table->string('notitie');
-            $table->integer('gebruiker_id')->unsigned()->nullable();
-            $table->foreign('gebruiker_id')->references('id')->on('gebruiker');
+            $table->string('gebruiker_email')->nullable();
+            $table->foreign('gebruiker_email')->references('email')->on('gebruiker');
         });
     }
 
@@ -38,7 +38,7 @@ class CreateProductTable extends Migration
         });
 
         schema::table('product', function($table){
-          $table->dropForeign('product_gebruiker_id_foreign');
+          $table->dropForeign('product_gebruiker_email_foreign');
         });
 
         Schema::dropIfExists('product');
