@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSoortTable extends Migration
+class CreateAndroidUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateSoortTable extends Migration
      */
     public function up()
     {
-        Schema::create('soort', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('naam')->unique();
+        Schema::create('android_users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateSoortTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('soort');
+        Schema::dropIfExists('android_users');
     }
 }

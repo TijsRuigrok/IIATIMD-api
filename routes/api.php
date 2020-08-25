@@ -17,17 +17,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/soorten','SoortController@index');
+Route::get('/products','ProductController@index');
+Route::get('/products/barcode/{barcode}','ProductController@showBarcode');
 
-Route::get('/producten','ProductController@index');
-Route::get('/producten/barcode/{barcode}','ProductController@showBarcode');
-Route::get('/producten/soort/{soort}','ProductController@showSoort');
-Route::get('/producten/email/{email}','ProductController@showEmail');
-Route::post('/productToevoegen', 'ProductController@store');
+Route::get('/productsInList','ProductInListController@index');
+Route::get('/productsInList/userId/{userId}','ProductInListController@showUserId');
+Route::post('/addProductInList', 'ProductInListController@store');
 
-Route::get('/gebruikers','GebruikerController@index');
-Route::get('/gebruikers/{email}','GebruikerController@show');
-Route::post('/gebruikerToevoegen', 'GebruikerController@store');
+Route::get('/users','AndroidUserController@index');
+Route::get('/users/{email}','AndroidUserController@show');
+Route::post('/addUser', 'AndroidUserController@store');
 
 //Formulier voor het testen van POST route
 //Moet uitgecomment blijven

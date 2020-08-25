@@ -16,27 +16,8 @@ class ProductController extends Controller
       return Product::where('barcode','=',$barcode)->first();
     }
 
-    public function showSoort($soort){
-      return Product::where('soort','=',$soort)->get();
-    }
-
-    public function showEmail($email){
-      return Product::where('gebruiker_email','=',$email)->get();
-    }
-
     public function create(){
       return view('product.create');
     }
-    public function store(Request $request){
-
-       $product = new Product();
-       $product->naam = $request->naam;
-       $product->barcode = $request->barcode;
-       $product->soort = $request->soort;
-       $product->houdbaarheidsdatum = $request->houdbaarheidsdatum;
-       $product->notitie = $request->notitie;
-       $product->gebruiker_email = $request->gebruiker_email;
-       $product->save();
-
-     }
+    
 }
