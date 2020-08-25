@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ProductInList;
+use App\Product;
 use DB;
 
 class ProductInListController extends Controller
@@ -15,6 +16,17 @@ class ProductInListController extends Controller
     public function showUserId($userId){
         return ProductInList::where('android_user_id','=',$userId)->get();
     }
+
+    public function showEmail($email){
+        return DB::table('products_in_list')
+            ->join('products','products.id','=','products_in_list.product_id')
+            ->join('android_users','android_users.id','=','products_in_list.android_user_id')
+            ->select('products.*')
+            ->where('email','=',$email)
+            ->get();
+    }
+
+
 
     public function store(Request $request){
         $productInList = new ProductInList();

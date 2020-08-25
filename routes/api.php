@@ -22,12 +22,13 @@ Route::get('/products/barcode/{barcode}','ProductController@showBarcode');
 
 Route::get('/productsInList','ProductInListController@index');
 Route::get('/productsInList/userId/{userId}','ProductInListController@showUserId');
+Route::get('/productsInList/email/{email}','ProductInListController@showEmail');
 Route::post('/addProductInList', 'ProductInListController@store');
 
 Route::get('/users','AndroidUserController@index');
 Route::get('/users/{email}','AndroidUserController@show');
 Route::post('/addUser', 'AndroidUserController@store');
 
-//Formulier voor het testen van POST route
-//Moet uitgecomment blijven
-Route::get('/producten/toevoegen','ProductController@create');
+// Formulier voor het testen van POST route
+// Moet uitgecomment blijven
+// Route::get('/producten/toevoegen','ProductController@create');
