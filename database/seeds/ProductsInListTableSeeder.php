@@ -12,7 +12,7 @@ class ProductsInListTableSeeder extends Seeder
     public function run()
     {
         DB::table('products_in_list')->insert([
-            'product_barcode' => '8711400408540',
+            'product_barcode' => '045496422875',
             'android_user_email' => 'TijsRuigrok15@gmail.com',
             'expiration_date' => '2020-10-10',
             'note' => 'Test',

@@ -19,10 +19,9 @@ class ProductInListController extends Controller
 
     public function showEmail($email){
         return DB::table('products_in_list')
-            ->join('products','products.id','=','products_in_list.product_id')
-            ->join('android_users','android_users.id','=','products_in_list.android_user_id')
+            ->join('products','products.barcode','=','products_in_list.product_barcode')
+            ->join('android_users','android_users.email','=','products_in_list.android_user_email')
             ->select('products.*','products_in_list.expiration_date','products_in_list.note')
-            ->where('email','=',$email)
             ->get();
     }
 
