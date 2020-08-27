@@ -22,6 +22,7 @@ class ProductInListController extends Controller
             ->join('products','products.barcode','=','products_in_list.product_barcode')
             ->join('android_users','android_users.email','=','products_in_list.android_user_email')
             ->select('products.*','products_in_list.expiration_date','products_in_list.note')
+            ->where('android_users.email','=',$email)
             ->get();
     }
 
