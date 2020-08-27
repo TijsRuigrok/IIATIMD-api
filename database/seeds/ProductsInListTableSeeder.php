@@ -16,6 +16,6 @@ class ProductsInListTableSeeder extends Seeder
             'android_user_email' => 'TijsRuigrok15@gmail.com',
             'expiration_date' => '2020-10-10',
             'note' => 'Test',
-          ]);
+        ]);
     }
 }

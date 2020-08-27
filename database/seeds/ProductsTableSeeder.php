@@ -13,7 +13,7 @@ class ProductsTableSeeder extends Seeder
     {
         DB::table('products')->insert([
           'name' => 'Banaan',
-          'barcode' => '8711400408540',
+          'barcode' => '045496422875',
         ]);
 
     }

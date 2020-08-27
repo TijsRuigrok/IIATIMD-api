@@ -13,6 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(AndroidUsersTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
-        $this->call(ProductsInListTableSeeder::class);
+        //$this->call(ProductsInListTableSeeder::class);
     }
 }
