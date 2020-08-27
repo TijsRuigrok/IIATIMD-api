@@ -26,15 +26,13 @@ class ProductInListController extends Controller
             ->get();
     }
 
-
-
     public function store(Request $request){
         $productInList = new ProductInList();
-        $productInList->product_id = $request->product_id;
-        $productInList->android_user_id = $request->android_user_id;
+        $productInList->product_barcode = $request->product_barcode;
+        $productInList->android_user_email = $request->android_user_email;
         $productInList->expiration_date = $request->expiration_date;
         $productInList->note = $request->note;
         $productInList->save();
     }
-  
+
 }

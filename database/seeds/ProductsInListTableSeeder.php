@@ -12,8 +12,8 @@ class ProductsInListTableSeeder extends Seeder
     public function run()
     {
         DB::table('products_in_list')->insert([
-            'product_id' => '1',
-            'android_user_id' => '1',
+            'product_barcode' => '8711400408540',
+            'android_user_email' => 'TijsRuigrok15@gmail.com',
             'expiration_date' => '2020-10-10',
             'note' => 'Test',
           ]);
