@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(AndroidUsersTableSeeder::class);
+//        $this->call(AndroidUsersTableSeeder::class);
         $this->call(ProductsTableSeeder::class);
         //$this->call(ProductsInListTableSeeder::class);
     }

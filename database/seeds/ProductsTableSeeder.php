@@ -12,8 +12,13 @@ class ProductsTableSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-          'name' => 'Banaan',
-          'barcode' => '045496422875',
+          'name' => 'Melkkan Verse Volle Melk',
+          'barcode' => '8710624283926',
+        ]);
+
+        DB::table('products')->insert([
+            'name' => 'Zaanse Hoeve Kaas Jong Belegen',
+            'barcode' => '2389281506532',
         ]);
 
     }
