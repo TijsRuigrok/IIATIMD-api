@@ -35,8 +35,10 @@ class ProductInListController extends Controller
         $productInList->save();
     }
 
-    public function delete($barcode) {
-        ProductInList::where('product_barcode','=',$barcode)->forceDelete();
+    public function delete($barcode, $email) {
+        ProductInList::where('product_barcode','=',$barcode)
+            ->where('android_user_email','=',$email)
+            ->forceDelete();
     }
 
 }

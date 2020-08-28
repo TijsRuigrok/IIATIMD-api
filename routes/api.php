@@ -24,7 +24,7 @@ Route::get('/productsInList','ProductInListController@index');
 Route::get('/productsInList/userId/{userId}','ProductInListController@showUserId');
 Route::get('/productsInList/email/{email}','ProductInListController@showEmail');
 Route::post('/addProductInList', 'ProductInListController@store');
-Route::post('/deleteProductInList/{barcode}', 'ProductInListController@delete');
+Route::post('/deleteProductInList/{barcode}/{email}', 'ProductInListController@delete');
 
 Route::get('/users','AndroidUserController@index');
 Route::get('/users/{email}','AndroidUserController@show');

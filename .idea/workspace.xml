@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2d4c1500-c9b4-4b4a-aa78-22af808f030e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductInListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductInListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +143,7 @@
       <updated>1598524613276</updated>
       <workItem from="1598524614488" duration="5144000" />
       <workItem from="1598605394943" duration="2486000" />
-      <workItem from="1598623358889" duration="3799000" />
+      <workItem from="1598623358889" duration="4563000" />
     </task>
     <servers />
   </component>
